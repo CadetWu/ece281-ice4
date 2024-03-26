@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Mar 13 07:28:02 2024
+# Process ID: 21828
+# Current directory: C:/Users/Brendan.Wu/Documents/ece281-ice4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17988 C:\Users\Brendan.Wu\Documents\ece281-ice4\stoplight.xpr
+# Log file: C:/Users/Brendan.Wu/Documents/ece281-ice4/vivado.log
+# Journal file: C:/Users/Brendan.Wu/Documents/ece281-ice4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Brendan.Wu/Documents/ece281-ice4/stoplight.xpr
+update_compile_order -fileset sources_1
+set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
+update_ip_catalog
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top stoplight_fsm_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1

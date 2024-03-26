@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Mar 13 07:28:02 2024
+# Process ID: 21828
+# Current directory: C:/Users/Brendan.Wu/Documents/ece281-ice4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17988 C:\Users\Brendan.Wu\Documents\ece281-ice4\stoplight.xpr
+# Log file: C:/Users/Brendan.Wu/Documents/ece281-ice4/vivado.log
+# Journal file: C:/Users/Brendan.Wu/Documents/ece281-ice4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Brendan.Wu/Documents/ece281-ice4/stoplight.xpr
+INFO: [Project 1-313] Project file moved from './vivado/ece281-ice4' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/Brendan.Wu/Documents/ece281-ice4/stoplight.ip_user_files', nor could it be found using path 'C:/Users/Brendan.Wu/Documents/ece281-ice4/vivado/ece281-ice4/stoplight.ip_user_files'.
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:basys3:part0:1.1. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+update_compile_order -fileset sources_1
+set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
+update_ip_catalog
+set_property top stoplight_fsm_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 13 10:44:19 2024...

@@ -109,34 +109,34 @@ begin
 		-- sequential timing		
 		w_reset <= '1';
 		wait for k_clk_period*1;
-		  assert w_stoplight = "010" report "bad reset" severity failure;
+		  assert w_stoplight = "010" report "bad reset" severity error;
 		
 		w_reset <= '0';
 		wait for k_clk_period*1;
 		
 		-- red light
 		w_C <= '0'; wait for k_clk_period;
-          assert w_stoplight = "100" report "should be red when no car" severity failure;
+          assert w_stoplight = "100" report "should be red when no car" severity error;
 		-- car shows up at red light
         w_C <= '1'; wait for k_clk_period;
-            assert w_stoplight = "001" report "should be green when car present" severity failure;
+            assert w_stoplight = "001" report "should be green when car present" severity error;
         wait for k_clk_period * 3; -- stay green
-            assert w_stoplight = "001" report "should be green when car present" severity failure;
+            assert w_stoplight = "001" report "should be green when car present" severity error;
         -- go to yellow
         w_C <= '0'; wait for k_clk_period;
-            assert w_stoplight = "010" report "should be yellow when cars done" severity failure;
+            assert w_stoplight = "010" report "should be yellow when cars done" severity error;
         wait for k_clk_period; -- time to go to red
-            assert w_stoplight = "100" report "did not go red after yellow" severity failure;
+            assert w_stoplight = "100" report "did not go red after yellow" severity error;
         
         -- reset and test yellow to red even if car
         w_reset <= '1'; w_C <= '1';
             wait for k_clk_period;
         w_reset <= '0';
-          assert w_stoplight = "010" report "bad reset" severity failure;
+          assert w_stoplight = "010" report "bad reset" severity error;
         wait for k_clk_period;
-            assert w_stoplight = "100" report "skipped red after yellow" severity failure;
+            assert w_stoplight = "100" report "skipped red after yellow" severity error;
         wait for k_clk_period;
-            assert w_stoplight = "001" report "should be green when car present" severity failure;
+            assert w_stoplight = "001" report "should be green when car present" severity error;
 	
 		wait;
 	end process;

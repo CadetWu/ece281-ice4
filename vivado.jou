@@ -1,0 +1,104 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Mar 16 22:06:54 2024
+# Process ID: 9064
+# Current directory: C:/Users/Brendan.Wu/Documents/ece281-ice4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11128 C:\Users\Brendan.Wu\Documents\ece281-ice4\stoplight.xpr
+# Log file: C:/Users/Brendan.Wu/Documents/ece281-ice4/vivado.log
+# Journal file: C:/Users/Brendan.Wu/Documents/ece281-ice4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+oopen_project C:/Users/Brendan.Wu/Documents/ece281-ice4/stoplight.xpruupdate_compile_order -fileset sources_1launch_simulation
+launch_simulation
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+add_files -norecurse C:/Users/Brendan.Wu/Documents/ece281-ice4/src/hdl/stoplight_fsm.vhd
+launch_simulation
+source stoplight_fsm_tb.tcl
+close_sim
+launch_simulation
+source stoplight_fsm_tb.tcl
+add_files -norecurse C:/Users/Brendan.Wu/Documents/ece281-ice4/src/hdl/stoplight_fsm.vhd
+add_files -norecurse C:/Users/Brendan.Wu/Documents/ece281-ice4/src/hdl/stoplight_fsm.vhd
+add_files -norecurse C:/Users/Brendan.Wu/Documents/ece281-ice4/src/hdl/stoplight_fsm.vhd
+add_files -norecurse C:/Users/Brendan.Wu/Documents/ece281-ice4/src/hdl/stoplight_fsm.vhd
+close_sim
+launch_simulation
+source stoplight_fsm_tb.tcl
+current_wave_config {Untitled 3}
+add_wave {{/stoplight_fsm_tb/w_stoplight}} 
+add_files -norecurse C:/Users/Brendan.Wu/Documents/ece281-ice4/src/hdl/clock_divider.vhd
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1
+close_sim
+launch_simulation
+source stoplight_fsm_tb.tcl
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+refresh_design
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Brendan.Wu/Documents/ece281-ice4/stoplight.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Brendan.Wu/Documents/ece281-ice4/stoplight.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Brendan.Wu/Documents/ece281-ice4/stoplight.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Brendan.Wu/Documents/ece281-ice4/stoplight.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_sim
+launch_simulation
+source stoplight_fsm_tb.tcl
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_sim
+launch_simulation
+source stoplight_fsm_tb.tcl
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Brendan.Wu/Documents/ece281-ice4/stoplight.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Brendan.Wu/Documents/ece281-ice4/stoplight.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_sim
